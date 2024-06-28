@@ -1,0 +1,43 @@
+
+
+<div class="row mb-3 d-flex justify-content-center">
+    <div class="row d-flex justify-content-center">
+        <div class="col-10">
+            <h1 class="text-center">Agregar Empleado</h1>
+        </div>
+    </div>
+    <div class="col-10">
+        <form (submit)="agregar()" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre del empleado</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre del empleado" name="nombre" [(ngModel)]="nuevo.nombre" required />
+              
+            </div>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="correo" placeholder="Correo" name="correo" [(ngModel)]="nuevo.correo" required />
+              
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="text" class="form-control" id="telefono" placeholder="Teléfono" name="telefono" [(ngModel)]="nuevo.telefono" required />
+              
+            </div>
+            <div class="mb-3">
+              <label for="fecha_nacimiento" class="form-label">Fecha de nacimiento</label>
+              <input type="date" class="form-control" id="fecha_nacimiento" placeholder="Fecha de nacimiento" name="fecha_nacimiento" [(ngModel)]="nuevo.fecha_nacimiento" required />
+            </div>
+            <div class="mb-3">
+              <label for="sexo" class="form-label">Sexo</label>
+              <select class="form-select" id="sexo" name="sexo" [(ngModel)]="nuevo.sexo" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </form>
+    </div>
+</div>
+
+
